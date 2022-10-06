@@ -4,7 +4,7 @@
         <img :src="imgSrc" class="hidden-pokemon" alt="pokemon">
 
         <img v-if="showPokemon" :src="imgSrc" class="fade-in" alt="pokemon">
-        <!-- Para bindear atributos HTML usamos v-bind, para bindear CONTENIDO HTML usamos {{}} -->
+        <!-- Para bindear atributos HTML usamos v-bind, para bindear CONTENIDO html usamos {{}} -->
     </div>    
 </template>
 
