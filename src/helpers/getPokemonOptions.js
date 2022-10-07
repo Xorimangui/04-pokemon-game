@@ -5,7 +5,7 @@ import pokemonApi from "@/api/pokemonApi"
 // y en este caso le estamos asignando un número a cada posicion (1 a 650).
 // Ese número lo sacamos gracias al indice del array, pero luego lo devolvemos como valor
 // al nuevo array.
-const getPokemons = () => {
+export const getPokemons = () => {
     const pokemonsArr = Array.from(Array(650))
 
     return pokemonsArr.map((_, index) => index + 1)
@@ -31,7 +31,7 @@ const getPokemonOptions = async() => {
 // Preparamos la peticion añadiendole una '/' seguida del número a la petición axios (pokemonApi.js)
 // lanzamos la petición y guardamos el resultado en un nuevo array que devolvemos.
 // Este array contiene 4 parejas de nombre e id de Pokemons al azar entre 1 y 650 de ID.
-const getPokemonNames = async([a, b, c, d] = []) => {
+export const getPokemonNames = async([a, b, c, d] = []) => {
 
     const promiseArr = [
         pokemonApi.get(`/${ a }`),
